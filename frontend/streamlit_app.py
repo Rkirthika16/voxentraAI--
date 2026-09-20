@@ -2,17 +2,11 @@ import os
 import sys
 from pathlib import Path
 
-# Ensure root workspace directory is in sys.path
-BASE_DIR = Path(__file__).resolve().parent.parent
-if str(BASE_DIR) not in sys.path:
-    sys.path.insert(0, str(BASE_DIR))
+# Robust root workspace directory resolution
+_curr = Path(__file__).resolve()
+BASE_DIR = _curr.parent.parent if _curr.parent.name == "frontend" else _curr.parent
 
-# Remove frontend directory from sys.path if added by Streamlit runner to avoid name shadowing
-FRONTEND_DIR = str(Path(__file__).resolve().parent)
-while FRONTEND_DIR in sys.path:
-    sys.path.remove(FRONTEND_DIR)
-
-# Re-ensure root workspace directory is at index 0
+# Ensure root directory is at index 0 of sys.path
 if str(BASE_DIR) in sys.path:
     sys.path.remove(str(BASE_DIR))
 sys.path.insert(0, str(BASE_DIR))
