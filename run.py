@@ -21,7 +21,7 @@ def main():
 
     if args.mode == "api":
         print("Starting FastAPI Backend on http://127.0.0.1:8000 ...")
-        subprocess.run([sys.executable, "-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", "8000", "--reload"])
+        subprocess.run([sys.executable, "-m", "uvicorn", "main:app", "--host", "127.0.0.1", "--port", "8000", "--reload"])
         return
 
     if args.mode == "frontend":
@@ -39,7 +39,7 @@ def main():
         print("=" * 70)
 
         # Launch API in background subprocess
-        api_proc = subprocess.Popen([sys.executable, "-m", "uvicorn", "app.main:app", "--host", "127.0.0.1", "--port", "8000"])
+        api_proc = subprocess.Popen([sys.executable, "-m", "uvicorn", "main:app", "--host", "127.0.0.1", "--port", "8000"])
         time.sleep(2)
         try:
             subprocess.run([sys.executable, "-m", "streamlit", "run", "frontend/streamlit_app.py"])
