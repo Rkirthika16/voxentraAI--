@@ -1,0 +1,27 @@
+# VoxentraAI - Core Backend & Web Framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+python-multipart>=0.0.9
+
+# Database & ORM
+sqlalchemy>=2.0.28
+alembic>=1.13.1
+
+# AI, NLP & Speech-to-Text
+openai-whisper>=20231117
+torch>=2.1.0
+torchaudio>=2.1.0
+soundfile>=0.12.1
+numpy>=1.26.0
+
+# Frontend & Visualization
+streamlit>=1.32.0
+plotly>=5.19.0
+pandas>=2.2.0
+requests>=2.31.0
+audio-recorder-streamlit>=0.0.10
+
+# Utilities
+python-dotenv>=1.0.1

@@ -1,0 +1,22 @@
+[environment]
+python_version = "3.11"
+python_platform = "windows"
+site_packages = "C:/Users/Akshaya/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages"
+
+[search_paths]
+extra_paths = [
+    ".",
+    "C:/Users/Akshaya/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages",
+    "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0/Lib/site-packages"
+]
+
+[errors]
+missing-import = false
+unresolved-import = false
+import-error = false
+
+[rules]
+missing-import = "ignore"
+unresolved-import = "ignore"
+reportMissingImports = "none"
+reportMissingModuleSource = "none"

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voxentra-ai"
+version = "1.0.0"
+description = "Tamil Nadu AI Public Complaint Registration and Management System"
+authors = [{ name = "VoxentraAI Team" }]
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pyrefly]
+ignore-missing-imports = true
+disabled-rules = ["missing-import", "unresolved-import", "import-error", "undefined-variable", "type-error"]
+search-paths = [
+    ".",
+    "app",
+    "frontend",
+    "tests",
+    "C:/Users/Akshaya/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages",
+    "C:/Program Files/WindowsApps/PythonSoftwareFoundation.Python.3.11_3.11.2544.0_x64__qbz5n2kfra8p0/Lib/site-packages"
+]
+
+[tool.pyright]
+include = [".", "app", "frontend", "tests"]
+extraPaths = [
+    ".",
+    "app",
+    "frontend",
+    "tests",
+    "C:/Users/Akshaya/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/site-packages"
+]
+reportMissingImports = "none"
+reportMissingModuleSource = "none"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
